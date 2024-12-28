@@ -1,0 +1,18 @@
+name: test
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+jobs:
+  test-ubuntu-20-04:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: install gstreamer development library
+        run: |
+          sudo apt-get update
+          DEBIAN_FRONTEND=noninteractive sudo apt-get install -y libgstreamer-plugins-base1.0-dev
+      - run: cargo test
