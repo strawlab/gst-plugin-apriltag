@@ -24,10 +24,10 @@ csv = "1.1"
 serde = { version = "1.0", features = ["derive"] }
 bytes = "0.6"
 
-ads-apriltag = { path = "../apriltag" }
+ads-apriltag = { git = "https://github.com/strawlab/strand-braid", rev = "79ce6469aebc599a5ff75c42769a5a1593a5f136" }
 
 [build-dependencies]
 gst-plugin-version-helper = "0.7.5"
 
 [dev-dependencies]
-download-verify = { path = "../download-verify" }
+download-verify = { git = "https://github.com/strawlab/strand-braid", rev = "79ce6469aebc599a5ff75c42769a5a1593a5f136" }
